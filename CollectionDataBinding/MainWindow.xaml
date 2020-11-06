@@ -25,12 +25,14 @@
                     <Label Content="Usuario:" Margin="2" />
                  
                         <TextBox Name="userTextBox" Margin="2" 
-                                 VerticalAlignment="Center" />
+                                 VerticalAlignment="Center"
+                                 Text="{Binding Name}" />
                    
                 </DockPanel>
             </Border>
             <ListBox Name="usersListBox" DisplayMemberPath="Name"
-                 SelectionMode="Single" SelectionChanged="usersListBox_SelectionChanged"/>
+                 SelectionMode="Single" IsSynchronizedWithCurrentItem="True"
+                     ItemsSource="{Binding}"/>
         </DockPanel>
 
     </Grid>
